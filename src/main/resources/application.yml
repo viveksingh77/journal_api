@@ -1,0 +1,41 @@
+spring:
+  profiles:
+    active: dev
+
+
+#logging:
+#  level:
+#    root: OFF
+
+#logging:
+#  level:
+#    com:
+#      firstspringboot:
+#        firstspringboot:
+#          services:
+#            UserService: OFF
+
+
+
+
+#spring:
+#  application:
+#    name: firstspringboot
+#  data:
+#    mongodb:
+#      uri: mongodb+srv://vksingh001:vksingh6437@cluster0.kghastb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+#      database: journaldb
+#      auto-index-creation: true
+#  main:
+#    allow-circular-references: true
+#
+#server:
+#  port: 8080
+
+
+#  servlet:
+#    context-path: /simpleapp
+#like this
+#  localhost:8080/simpleapp/admin/all-users
+
+
