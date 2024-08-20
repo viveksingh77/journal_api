@@ -1,41 +1,63 @@
 spring:
-  profiles:
-    active: dev
+  application:
+    name: firstspringboot
+  redis:
+    host: redis-15218.c281.us-east-1-2.ec2.redns.redis-cloud.com
+    port: 15218
+    password: w5E8GeK0csf6ujG95LvPicrbQAZQSal7
+  data:
+    mongodb:
+      uri: mongodb+srv://vksingh001:vksingh6437@cluster0.kghastb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      database: journaldb
+      auto-index-creation: true
+  main:
+    allow-circular-references: true
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: deepusingh6437@gmail.com
+    password: toyl sicg ojdn arge
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  kafka:
+    bootstrap-servers: pkc-l7pr2.ap-south-1.aws.confluent.cloud:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    consumer:
+      group-id: weekly-sentiment-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: com.firstspringboot.firstspringboot.model
+
+    properties:
+      security:
+        protocol: SASL_SSL
+      sasl:
+        mechanism: PLAIN
+        jaas:
+          config: org.apache.kafka.common.security.plain.PlainLoginModule required username='OBJ3NLOK724Z6DWN' password='xFZK44rNHRPoxFgLB8my9hcpTJ4YH5shJ63y70UtYajFTJQAKfPMCXpxmh78AOnq';
+      session:
+        timeout:
+          ms: 45000
+#start transport layer secure starttls
+server:
+  port: 8080
 
 
-#logging:
-#  level:
-#    root: OFF
-
-#logging:
-#  level:
-#    com:
-#      firstspringboot:
-#        firstspringboot:
-#          services:
-#            UserService: OFF
-
-
-
-
-#spring:
-#  application:
-#    name: firstspringboot
-#  data:
-#    mongodb:
-#      uri: mongodb+srv://vksingh001:vksingh6437@cluster0.kghastb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
-#      database: journaldb
-#      auto-index-creation: true
-#  main:
-#    allow-circular-references: true
-#
-#server:
-#  port: 8080
-
+weather:
+  api:
+    key: 1a9550898af04ceeb74215527240608
 
 #  servlet:
 #    context-path: /simpleapp
 #like this
 #  localhost:8080/simpleapp/admin/all-users
-
-
