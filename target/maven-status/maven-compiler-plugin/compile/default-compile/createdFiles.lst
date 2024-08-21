@@ -12,7 +12,6 @@ com\firstspringboot\firstspringboot\repository\UserRepositoryImpl.class
 com\firstspringboot\firstspringboot\config\SpringSecurity.class
 com\firstspringboot\firstspringboot\services\EmailService.class
 com\firstspringboot\firstspringboot\controller\JournalEntryControllerV2.class
-com\firstspringboot\firstspringboot\MyClass.class
 com\firstspringboot\firstspringboot\FirstspringbootApplication.class
 com\firstspringboot\firstspringboot\repository\UserRepository.class
 com\firstspringboot\firstspringboot\model\SentimentData.class
